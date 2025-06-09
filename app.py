@@ -60,7 +60,7 @@ if file is not None:
 
         os.environ['GOOGLE_API_KEY']="AIzaSyCjwbGxfJZ_MWidAvKquQm4J83PK4pKHB0"
         genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
-        model = genai.GenerativeModel('gemini-1.5-pro')
+        model = genai.GenerativeModel('gemini-2.0-flash-exp')
         response = model.generate_content(f"Is the following answer correct?\n\nQuestion: {parsed_questions_and_answers}\n\nAnswer with only 'Yes' or 'No' for each question in parsed_questions_and_answers.")
         to_markdown(response.text)
 
